@@ -2,7 +2,8 @@
 FROM maven:3.9.4-eclipse-temurin-17 AS build
 WORKDIR /app
 COPY . .
-RUN mvn clean package -DskipTests
+RUN mvn clean package -Dmaven.test.skip=true
+
 
 # Use a lightweight JRE image to run the app
 FROM eclipse-temurin:17-jdk

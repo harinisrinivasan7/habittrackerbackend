@@ -20,7 +20,7 @@ import java.util.HashMap;
 
 @RestController
 @RequestMapping("/api/habits")
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "*")
 public class HabitController {
 
     @Autowired
